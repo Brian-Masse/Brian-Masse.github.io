@@ -38,7 +38,7 @@ const HStack = document.createElement("div")
 HStack.className="HStack"
 body.appendChild(HStack)
 
-for ( let i = 0; i < entries.length ; i ++ ) {
+for ( let i = entries.length - 1; i >= 0 ; i -= 1 ) {
     const projectEntry = document.createElement("div")
     projectEntry.className = "projectEntry relativePos il"
     
