@@ -159,4 +159,9 @@ body {
   font-size: 90%;
   padding-left: 10px;
   color: rgba(241, 217, 213, 0.5);
+
+  white-space: normal;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }

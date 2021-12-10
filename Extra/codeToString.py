@@ -1,4 +1,4 @@
-with open('/Users/brianmasse/Developer/Python/CSC630/CSC630/PW/PW.py') as f:
+with open('/Users/brianmasse/Developer/Python/CSC630/CSC630/AddisonDataSet/AddisontDataSet.py') as f:
     lines = f.readlines()
     string = "\\n"
     for line in lines:
@@ -8,8 +8,3 @@ with open('/Users/brianmasse/Developer/Python/CSC630/CSC630/PW/PW.py') as f:
             else:
                 string += line[i]
     print(string+"\\n")
-                
-    
-    
-    
-    
