@@ -1,6 +1,9 @@
 const body = document.body
 
 
+
+
+
 class ProjectEntry {
     constructor(title, date, description, imageSource, codeLabel, language, code) { 
         this.title = title
@@ -96,7 +99,7 @@ for ( let i = entries.length - 1; i >= 0 ; i -= 1 ) {
     codeBlock.appendChild(codePre)
     const code = document.createElement("code")
     codePre.appendChild(code)
-    code.className="language-python"
+    code.className="language-python line-numbers"
     code.innerHTML=entries[i].code
     projectEntry.appendChild(codeBlock)
 

@@ -9,8 +9,8 @@ pre[class*="language-"] {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
-  word-break: normal;
-  word-wrap: break-word;
+  word-break: break-all;
+  word-wrap: inherit;
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
