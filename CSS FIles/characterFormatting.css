@@ -1,0 +1,399 @@
+* {
+  text-decoration: none;
+  list-style: none;
+
+  margin: 0px;
+  padding: 0px;
+
+  font-family: "DIN Condensed Bold";
+}
+
+:root {
+  --prime-c: rgb(224, 74, 53);
+  --lighter-prime-c: rgba(252, 81, 58, 1);
+  --darker-prime-c: rgba(192, 62, 44, 1);
+  --clear-prime-c: rgb(224, 74, 53, 0.7);
+  --super-clear-prime-c: rgb(224, 74, 53, 0.2);
+
+  --clear: rgb(0, 0, 0, 0);
+  --tan: rgba(217, 194, 173, 1);
+  --light-tan: rgba(237, 213, 189, 1);
+
+  background-color: var(--light-tan);
+}
+
+/* INTRO */
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+
+  z-index: -2;
+  background-color: var(--tan);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 70px rgb(1, 1, 1, 0.5);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 20rem;
+  width: 100%;
+  text-align: center;
+}
+
+.title-container {
+  margin-bottom: -120px;
+}
+
+.subtitle {
+  width: 30%;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.left {
+  color: var(--prime-c);
+  text-shadow: -10px 10px 20px var(--clear-prime-c);
+  text-align: right;
+}
+
+.right {
+  color: var(--light-tan);
+  text-shadow: 7px -7px 20px rgb(1, 1, 1, 0.4);
+  text-align: left;
+}
+
+.container ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.container ul li {
+  position: relative;
+  margin: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.image-container li {
+  width: 50%;
+  display: flex;
+  justify-items: right;
+}
+
+.container ul li img {
+  width: 25%;
+  margin: 5px;
+  border: 5px solid var(--prime-c);
+}
+
+.filler {
+  width: 750%;
+}
+
+/* INTRO STYLE */
+
+.box {
+  z-index: -1;
+  position: absolute;
+  border: 2px solid var(--prime-c);
+}
+
+.box-filled {
+  z-index: -1;
+  position: absolute;
+
+  background-color: var(--prime-c);
+  opacity: 0.2;
+}
+
+.box1 {
+  right: 50.5%;
+  left: 40px;
+  top: 40px;
+  bottom: 200px;
+}
+
+.box2 {
+  right: calc(50.5% - 20px);
+  left: 20px;
+  top: 20px;
+  bottom: 220px;
+}
+
+.box3 {
+  right: 50.5%;
+  left: 40px;
+  top: 40px;
+  bottom: 220px;
+}
+
+.box4 {
+  right: 20px;
+  left: 54%;
+  top: 500px;
+  bottom: 20px;
+}
+
+.box5 {
+  right: 40px;
+  left: calc(54% - 20px);
+  top: 480px;
+  bottom: 40px;
+}
+
+.box6 {
+  right: 40px;
+  left: 54%;
+  top: 500px;
+  bottom: 40px;
+}
+
+.box7 {
+  right: 59%;
+  left: 200px;
+  top: 140px;
+  bottom: 520px;
+}
+
+.box8 {
+  right: calc(59% + 20px);
+  left: 180px;
+  top: 160px;
+  bottom: 540px;
+}
+
+.box9 {
+  right: calc(59% + 20px);
+  left: 200px;
+  top: 160px;
+  bottom: 540px;
+}
+
+/* CHARACTER CONTAINER */
+
+.character-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+
+  padding-top: 20px;
+}
+
+.character-container ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  color: var(--prime-c);
+  font-size: 2.1em;
+  padding: 30px;
+  text-shadow: 5px 5px 10px var(--clear-prime-c);
+
+  width: 1000px;
+}
+
+.character-container ul li {
+  position: relative;
+  width: 30%;
+  height: 300px;
+  margin: 10px;
+
+  transition: 1s ease;
+  transform-style: preserve-3d;
+}
+
+.character-container ul li:hover .front {
+  transform: rotateY(180deg);
+}
+.character-container ul li:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  position: absolute;
+  margin-bottom: 200px;
+
+  box-shadow: -20px 10px 30px var(--clear-prime-c);
+  background-color: var(--prime-c);
+  border-radius: 50%;
+
+  transition: 1s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  z-index: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.darker {
+  background-color: var(--darker-prime-c);
+}
+.lighter {
+  background-color: var(--lighter-prime-c);
+}
+
+.back {
+  position: absolute;
+  /* width: 150%;
+  padding-bottom: 150%; */
+  height: auto;
+
+  transform: rotateY(180deg);
+}
+
+.back div,
+.front div {
+  position: absolute;
+
+  left: 15%;
+  right: 15%;
+  top: 15%;
+  bottom: 15%;
+
+  overflow-wrap: break-word;
+
+  color: var(--light-tan);
+  text-shadow: 1px -1px 10px var(--tan);
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.long {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+}
+
+.front:not(.long) {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.back {
+  font-size: 1.3rem;
+}
+
+/* QUOTES */
+
+.quotation {
+  position: absolute;
+  font-size: 10rem;
+  margin-top: -80px;
+  margin-left: -60px;
+  font-family: "Bodoni 72 Smallcaps Book";
+}
+
+.quote {
+  position: absolute;
+  margin: 15px;
+
+  font-size: 4rem;
+  width: 400px;
+  height: 25%;
+
+  font-family: "Bodoni 72 Smallcaps Book";
+
+  color: var(--prime-c);
+}
+.dropdown-button {
+  font-size: 1rem;
+  margin-top: 25px;
+  transition: 0.5s ease;
+}
+
+.dropdown-button:hover .quote-description {
+  opacity: 1;
+}
+
+.quote-description {
+  background-color: var(--super-clear-prime-c);
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Bodoni 72 Smallcaps Book";
+
+  width: 90%;
+  height: 250px;
+
+  overflow-y: scroll;
+  transition: 0.2s ease;
+  opacity: 0;
+
+  border: 1px solid var(--prime-c);
+}
+
+.quote1 {
+  text-align: right;
+  left: 3%;
+  top: 2%;
+}
+.quote2 {
+  text-align: left;
+  top: 51%;
+  left: 3%;
+}
+.quote3 {
+  text-align: right;
+  top: 25%;
+  right: 2%;
+}
+
+/* REVIEW */
+
+.review {
+  width: 98%;
+  height: auto;
+  background-color: var(--tan);
+
+  margin: 20px;
+
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.publisher {
+  width: 20%;
+
+  font-size: 2.5rem;
+  text-align: end;
+
+  margin-right: 10px;
+}
+
+.publisher-icon {
+  width: 3%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.review-quote {
+  font-family: "Bodoni 72 Smallcaps Book";
+
+  margin-left: 20px;
+  font-size: 2rem;
+  width: 60%;
+
+  /* background-color: blue; */
+}
