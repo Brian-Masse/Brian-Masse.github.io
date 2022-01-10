@@ -5,8 +5,13 @@
   margin: 0px;
   padding: 0px;
 
-  font-family: "DIN Condensed Bold";
+  font-family: "DIN";
   zoom: 0.96;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("../extra/DIN Condensed Bold.ttf");
 }
 
 :root {
